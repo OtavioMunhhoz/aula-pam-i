@@ -9,7 +9,6 @@ const styles = StyleSheet.create({
         padding:8,
         alignItems: 'center', //alinhamento horizontal - flexDirection collum
     },
-
     titulo:{
         fontSize:RFPercentage(3.5),
         borderWidth: 3,
@@ -24,11 +23,14 @@ const styles = StyleSheet.create({
         borderColor:'grey', // cor da borda
         borderRadius: 20, // arredondar a borda
     },
+    
+    imagem:{
+       // height:RFPercentage(16),
+        //width:RFPercentage(48),
+        width:'90%',
+        resizeMode: 'contain',
 
-    texto:{
-        fontSize:RFPercentage(2.2),
-    },
-
+    }
 })
 
 export default styles
