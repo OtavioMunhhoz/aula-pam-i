@@ -1,36 +1,36 @@
-import { StyleSheet} from 'react-native';
-import { RFPercentage } from 'react-native-responsive-fontsize';
+import { StyleSheet } from "react-native";
+import { RFPercentage } from "react-native-responsive-fontsize";
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1, //ocupa 100% da tela
-        backgroundColor: '#fafafa',
-        borderRadius:5, //borda curvada
-        padding:8,
-        alignItems: 'center', //alinhamento horizontal - flexDirection collum
-    },
-    titulo:{
-        fontSize:RFPercentage(3.5),
-        borderWidth: 3,
-        marginTop: 20, //margem acima do elemento
-        marginBottom: 20,//margem abaixo do elemento,
-        // padding: 8,
-        width: '100%', // largura do objeto
-        height: 65, // altura no objeto
-        textAlign:'center', // alinhamento horizontal do texto no container
-        textAlignVertical: 'center', // alinhamnento vertical do texto no container
-        color:'darkslategrey', // cor do texto
-        borderColor:'grey', // cor da borda
-        borderRadius: 20, // arredondar a borda
-    },
-    
-    imagem:{
-       // height:RFPercentage(16),
-        //width:RFPercentage(48),
-        width:'90%',
-        resizeMode: 'contain',
+  cardContainer: {
+    flexDirection: "row", // Alinha os itens na horizontal (imagem + texto)
+    alignItems: "center",
+    borderWidth: 1,
+    borderColor: "darkslategrey",
+    borderRadius: 10,
+    width: "90%",
+    padding: 10,
+    backgroundColor: "#fff",
+    marginBottom: 10,
+  },
+  imagem: {
+    width: 100,  // Ajuste o tamanho da imagem
+    height: 100, // Ajuste o tamanho da imagem
+    resizeMode: "contain",
+    marginRight: 10, // Espaço entre a imagem e o texto
+  },
+  textContainer: {
+    flex: 1, // Faz o texto ocupar o espaço restante
+  },
+  titulo: {
+    fontSize: RFPercentage(3),
+    fontWeight: "bold",
+    color: "darkslategrey",
+  },
+  descricao: {
+    fontSize: RFPercentage(2.2),
+    color: "#222",
+  },
+});
 
-    }
-})
-
-export default styles
+export default styles;
