@@ -11,25 +11,25 @@ import atck from '../../../assets/atck_on_titan.png'
 function Atividade02() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo2}>Atividade 02</Text>
+      <Text style={styles.titulo2}>MangaShop</Text>
       <Card 
         titulo2="Demom Slayer" 
-        descricao="Um jogo emocionante sobre sobrevivência e laços humanos. R$100,00" 
+        descricao="Após sua família ser massacrada por demônios, Tanjiro Kamado se junta à corporação de caçadores de demônios para vingar sua família e salvar sua irmã Nezuko. Preço: R$100,00" 
         img={demon} 
       />
       <Card 
         titulo2="Naruto" 
-        descricao="Ação e terror em uma jornada contra o bioterrorismo. R$70,00" 
+        descricao="A história segue Naruto Uzumaki, um jovem ninja que busca reconhecimento e sonha em se tornar o Hokage, o líder de sua vila, enfrentando desafios internos e externos enquanto faz amigos e inimigos poderosos. Preço: R$70,00" 
         img={naruto} 
       />
       <Card 
         titulo2="One Piece" 
-        descricao="Um épico do velho oeste com ação e uma história inesquecível. R$150,00" 
+        descricao=" Luffy e sua tripulação de piratas navegam pelos mares em busca do maior tesouro de todos os tempos, o One Piece, enfrentando inimigos poderosos e descobrindo mistérios em cada ilha que visitam. Preço: R$150,00" 
         img={onepiece} 
       />
       <Card 
         titulo2="Attack on Titan" 
-        descricao="Um épico do velho oeste com ação e uma história inesquecível. R$150,00" 
+        descricao="Em um mundo onde a humanidade é ameaçada por gigantes devoradores de homens, Eren Yeager e seus amigos lutam pela sobrevivência enquanto tentam desvendar os segredos por trás dos titãs e a origem de sua existência. Preço: R$150,00" 
         img={atck} 
       />
     </View>

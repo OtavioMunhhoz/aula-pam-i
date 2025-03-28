@@ -14,8 +14,9 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   imagem: {
-    width: 100,  // Ajuste o tamanho da imagem
-    height: 100, // Ajuste o tamanho da imagem
+
+    width: RFPercentage(10),  // Ajuste o tamanho da imagem
+    height: 120, // Ajuste o tamanho da imagem
     resizeMode: "contain",
     marginRight: 10, // Espaço entre a imagem e o texto
   },
