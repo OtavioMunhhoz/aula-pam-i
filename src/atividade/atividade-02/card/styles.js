@@ -14,12 +14,11 @@ const styles = StyleSheet.create({
     marginBottom: 10,
   },
   imagem: {
-
-    width: RFPercentage(10),  // Ajuste o tamanho da imagem
-    height: 120, // Ajuste o tamanho da imagem
-    resizeMode: "contain",
-    marginRight: 10, // Espaço entre a imagem e o texto
-  },
+    height: RFPercentage(20), 
+    width: RFPercentage(12),  
+    resizeMode: 'stretch',
+    margin: RFPercentage(1),
+}, 
   textContainer: {
     flex: 1, // Faz o texto ocupar o espaço restante
   },
@@ -27,11 +26,26 @@ const styles = StyleSheet.create({
     fontSize: RFPercentage(3),
     fontWeight: "bold",
     color: "darkslategrey",
+    marginLeft: RFPercentage(1.5),
   },
   descricao: {
-    fontSize: RFPercentage(2.2),
+    fontSize: RFPercentage(2),
     color: "#222",
+    textAlign: 'center'
   },
+  valor: {
+    fontSize: RFPercentage(2),
+    color: '#fff', // Contraste com o fundo escuro
+    fontWeight: 'bold',
+    textAlign: 'center',
+    backgroundColor: 'darkslategrey', // Fundo escuro para destaque
+    padding: RFPercentage(1),
+    borderRadius: RFPercentage(1),
+    width: '80%',
+    marginTop: RFPercentage(1),
+    marginLeft: RFPercentage(1.5),
+  },
+
 });
 
 export default styles;

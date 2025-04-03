@@ -1,4 +1,4 @@
-import { View, Text } from "react-native";
+import { View, Text, } from "react-native";
 
 import styles from "./styles";
 import Card from "./card";
@@ -11,29 +11,34 @@ import atck from '../../../assets/atck_on_titan.png'
 function Atividade02() {
   return (
     <View style={styles.container}>
-      <Text style={styles.titulo2}>MangaShop</Text>
+      <Text style={styles.titulo}>MangaShop</Text>
       <Card 
-        titulo2="Demom Slayer" 
-        descricao="Após sua família ser massacrada por demônios, Tanjiro Kamado se junta à corporação de caçadores de demônios para vingar sua família e salvar sua irmã Nezuko. Preço: R$100,00" 
+        titulo="Demom Slayer" 
+        descricao="Após sua família ser morta por demônios, Tanjiro Kamado se junta à corporação de caçadores de demônios para vingar sua família e salvar sua irmã Nezuko." 
         img={demon} 
+        valor={'100,00'}
       />
       <Card 
-        titulo2="Naruto" 
-        descricao="A história segue Naruto Uzumaki, um jovem ninja que busca reconhecimento e sonha em se tornar o Hokage, o líder de sua vila, enfrentando desafios internos e externos enquanto faz amigos e inimigos poderosos. Preço: R$70,00" 
+        titulo="Naruto" 
+        descricao="A história segue Naruto Uzumaki, um jovem ninja que busca e sonha em se tornar o Hokage, enfrentando desafios enquanto faz amigos e inimigos." 
         img={naruto} 
+        valor={'120,00'}
       />
       <Card 
-        titulo2="One Piece" 
-        descricao=" Luffy e sua tripulação de piratas navegam pelos mares em busca do maior tesouro de todos os tempos, o One Piece, enfrentando inimigos poderosos e descobrindo mistérios em cada ilha que visitam. Preço: R$150,00" 
+        titulo="One Piece" 
+        descricao=" Luffy e sua tripulação de piratas navegam pelos mares em busca do maior tesouro de todos os tempos, o One Piece." 
         img={onepiece} 
+        valor={'160,00'}
       />
-      <Card 
-        titulo2="Attack on Titan" 
-        descricao="Em um mundo onde a humanidade é ameaçada por gigantes devoradores de homens, Eren Yeager e seus amigos lutam pela sobrevivência enquanto tentam desvendar os segredos por trás dos titãs e a origem de sua existência. Preço: R$150,00" 
-        img={atck} 
-      />
+      
     </View>
   );
 }
 
 export default Atividade02;
+
+// <Card 
+//       titulo="Attack on Titan" 
+//        descricao="Em um mundo onde a humanidade é ameaçada por gigantes devoradores de homens, Eren Yeager e seus amigos lutam pela sobrevivência enquanto tentam desvendar os segredos por trás dos titãs." 
+//        img={atck} 
+//        valor={'99,00'}    />
