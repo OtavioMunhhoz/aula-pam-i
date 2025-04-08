@@ -10,6 +10,14 @@ const styles = StyleSheet.create({
         alignItems: 'center', //alinhamento horizontal - flexDirection collum
     },
 
+    container1: {
+        flex: 1, //ocupa 100% da tela
+        backgroundColor: '#fafafa',
+        borderRadius:5, //borda curvada
+        padding:8,
+        alignItems: 'center', //alinhamento horizontal - flexDirection collum
+    },
+
     titulo:{
         fontSize:RFPercentage(3.5),
         borderWidth: 3,
@@ -29,23 +37,27 @@ const styles = StyleSheet.create({
         fontSize:RFPercentage(2.2),
     },
 
-    botaoAlert: {
-        width:'70%',
-        margin: RFPercentage(2),
-    },
-
     valor: {
         color:'darkslategrey',
         fontSize:RFPercentage(4),
     },
 
-    botao: {
-        backgroundColor:'darkslategrey',
-        width: '75%',
-        borderRadius: RFPercentage(1.5),
+    botao1: {
+        backgroundColor:'grey',
+        width: '23%',
+        //borderRadius: RFPercentage(1.5),
+        padding:RFPercentage(1.5),
+        alignItems: 'flex-end',
+        justifyContent:'center',
+        margin: RFPercentage(2),
+    },
+    botao2: {
+        backgroundColor:'grey',
+        width: '25%',
+        //borderRadius: RFPercentage(1.5),
         padding:RFPercentage(1.5),
         alignItems: 'center',
-        justifyContent:'center',
+        justifyContent:'flex-start',
         margin: RFPercentage(2),
     },
 
