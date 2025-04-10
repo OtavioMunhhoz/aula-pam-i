@@ -22,19 +22,22 @@ function Atividade03 () {
         <View style={styles.container}>
             <Text style={styles.titulo}>Atividade 3</Text>
 
-        <View style={styles.container1}>
-           <Text style={styles.valor}>{numero}</Text>
-           <TouchableOpacity style={styles.botao1} onPress={handleIncrementa}>
-                <Text style={styles.txtBotao}>+1</Text>
+            <View style={styles.container1}>
+           
+           <TouchableOpacity style={styles.botao} onPress={handleIncrementa}>
+                <Text style={styles.txtBotao}>+</Text>
            </TouchableOpacity>
 
-           <TouchableOpacity style={styles.botao2} onPress={handleIncrementa1}>
-                <Text style={styles.txtBotao}>-1</Text>
+           <Text style={styles.valor}>{numero}</Text>
+
+           <TouchableOpacity style={styles.botao} onPress={handleIncrementa1}>
+                <Text style={styles.txtBotao}>-</Text>
            </TouchableOpacity>
-           <TouchableOpacity style={styles.botao} onPress={handleZerar}>
+
+           </View>
+           <TouchableOpacity style={styles.botaoZerar} onPress={handleZerar}>
                 <Text style={styles.txtBotao}>ZERAR</Text>
            </TouchableOpacity>
-           </View>
 
 
         </View>

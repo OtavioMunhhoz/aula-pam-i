@@ -3,69 +3,64 @@ import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1, //ocupa 100% da tela
-        backgroundColor: '#fafafa',
-        borderRadius:5, //borda curvada
-        padding:8,
-        alignItems: 'center', //alinhamento horizontal - flexDirection collum
+      flex: 1,
+      backgroundColor: '#f4f4f4',
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 20,
     },
-
+  
+    titulo: {
+      fontSize: RFPercentage(4),
+      fontWeight: 'bold',
+      color: '#999',
+      marginBottom: 16,
+      borderWidth: 3,
+      padding:RFPercentage(1.5),
+      borderRadius: 20,
+      borderColor: 'grey',
+    },
+  
     container1: {
-        flex: 1, //ocupa 100% da tela
-        backgroundColor: '#fafafa',
-        borderRadius:5, //borda curvada
-        padding:8,
-        alignItems: 'center', //alinhamento horizontal - flexDirection collum
+      borderWidth: 2,
+      borderColor: 'grey',
+      backgroundColor: '#fafafa',
+      padding: RFPercentage(5),
+      alignItems: 'center',
+      justifyContent: 'center',
+      borderRadius: 15,
+      flexDirection:'row',
     },
-
-    titulo:{
-        fontSize:RFPercentage(3.5),
-        borderWidth: 3,
-        marginTop: 20, //margem acima do elemento
-        marginBottom: 20,//margem abaixo do elemento,
-        // padding: 8,
-        width: '100%', // largura do objeto
-        height: 65, // altura no objeto
-        textAlign:'center', // alinhamento horizontal do texto no container
-        textAlignVertical: 'center', // alinhamnento vertical do texto no container
-        color:'darkslategrey', // cor do texto
-        borderColor:'grey', // cor da borda
-        borderRadius: 20, // arredondar a borda
-    },
-
-    texto:{
-        fontSize:RFPercentage(2.2),
-    },
-
+  
     valor: {
-        color:'darkslategrey',
-        fontSize:RFPercentage(4),
+      fontSize: RFPercentage(4.5),
+      fontWeight: 'bold',
+      marginHorizontal: 20,
+      color: '#333',
     },
-
-    botao1: {
-        backgroundColor:'grey',
-        width: '23%',
-        //borderRadius: RFPercentage(1.5),
-        padding:RFPercentage(1.5),
-        alignItems: 'flex-end',
-        justifyContent:'center',
-        margin: RFPercentage(2),
+  
+    botao: {
+      backgroundColor: 'grey',
+      width: 60,
+      height: 60,
+      alignItems: 'center',
+      justifyContent: 'center',
+      margin: 10,
     },
-    botao2: {
-        backgroundColor:'grey',
-        width: '25%',
-        //borderRadius: RFPercentage(1.5),
-        padding:RFPercentage(1.5),
-        alignItems: 'center',
-        justifyContent:'flex-start',
-        margin: RFPercentage(2),
+  
+    botaoZerar: {
+      backgroundColor: 'grey',
+      paddingVertical: 10,
+      paddingHorizontal: 30,
+      borderRadius: 30,
+      marginTop: 20,
     },
-
+  
     txtBotao: {
-        fontSize:RFPercentage(2),
-        color: '#fafafa',
+      color: '#fff',
+      fontSize: RFPercentage(3),
+      fontWeight: 'bold',
     },
-
-})
+  });
 
 export default styles
