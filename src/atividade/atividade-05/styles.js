@@ -1,11 +1,12 @@
 // styles.js
 import { StyleSheet } from 'react-native';
+import { RFPercentage } from 'react-native-responsive-fontsize';
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: '#f2f2f2',
     justifyContent: 'center',
   },
   titulo: {
@@ -22,6 +23,7 @@ const styles = StyleSheet.create({
     color: '#666',
   },
   txtLabel: {
+    textAlign:'center',
     fontSize: 16,
     marginTop: 10,
     color: '#333',
@@ -29,37 +31,49 @@ const styles = StyleSheet.create({
   txtEntrada: {
     borderWidth: 1,
     borderColor: '#ccc',
-    borderRadius: 5,
+    borderRadius: 8,
     padding: 10,
     marginTop: 5,
-    marginBottom: 10,
     fontSize: 16,
     backgroundColor: '#fff',
   },
-  txtSaida: {
-    fontSize: 24,
-    textAlign: 'center',
-    marginVertical: 10,
-    color: '#000',
-  },
   textLabel: {
+    textAlign:'center',
     fontSize: 18,
-    marginTop: 15,
+    marginTop: 20,
     fontWeight: 'bold',
     color: '#444',
   },
   button: {
+    flexDirection:'row',
+    justifyContent:'space-around',
     backgroundColor: '#4CAF50',
+    marginTop:20,
+    marginBottom:20,
     paddingVertical: 12,
     paddingHorizontal: 20,
     borderRadius: 8,
-    marginTop: 20,
-    alignItems: 'center',
+   // marginHorizontal: 5,
+    //margin:RFPercentage(1),
+    //marginTop:RFPercentage(2)
+    //alignItems: 'center',
+    //minWidth:RFPercentage(1),
   },
   
+  buttonLimpar: {
+    backgroundColor: 'red',
+    paddingVertical: 12,
+    paddingHorizontal: 20,
+    borderRadius: 8,
+    marginHorizontal: 5,
+    margin:RFPercentage(1),
+    alignItems: 'center',
+    minWidth: 10,
+  },
+
   textButton: {
     color: '#fff',
-    fontSize: 20,
+    fontSize: 18,
     fontWeight: 'bold',
   },
 });
