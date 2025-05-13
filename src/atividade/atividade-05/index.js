@@ -1,101 +1,51 @@
 import { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text } from 'react-native'; 
+
+import Input from './input'; 
+import Botao from './botao';
+
 import styles from './styles';
 
-function Atividade05() {
-  const [n1, setN1] = useState('');
-  const [n2, setN2] = useState('');
-  const [total, setTotal] = useState('');
+export default function Atividade5() {
 
-  function calcular(operador) {
-    const num1 = parseFloat(n1);
-    const num2 = parseFloat(n2);
+    const [n1, setN1] = useState(0);
+    const [n2, setN2] = useState(0);
+    const [total, setTotal] = useState(0);
 
-    if (isNaN(num1) || isNaN(num2)) {
-      setTotal('Erro');
-      return;
+    function handleZerar() {
+        setN1(0);
+        setN2(0);
+        setTotal(0);
     }
 
-    let resultado = 0;
-    switch (operador) {
-      case '+':
-        resultado = num1 + num2;
-        break;
-      case '-':
-        resultado = num1 - num2;
-        break;
-      case '*':
-        resultado = num1 * num2;
-        break;
-      case '/':
-        if (num2 === 0) {
-          setTotal('Divisão por zero');
-          return;
-        }
-        resultado = num1 / num2;
-        break;
-    }
+    return (
+        <View style={styles.container}>
+            <Text style={styles.titulo}> Exemplo 5 </Text>
 
-    setTotal(resultado.toString());
-  }
+            <Text style={styles.txtSaida}> Calculadora básica </Text>
 
-  function limpar() {
-    setN1('');
-    setN2('');
-    setTotal('');
-  }
+            <Text style={styles.textLabel}> 1º número </Text>
+            <Input onChangeText={setN1} value={n1} />
 
-  return (
-    <View style={styles.container}>
-      <Text style={styles.titulo}>Calculadora</Text>
-      <Text style={styles.texto}>Quatro Operações</Text>
+            <Text style={styles.txtSaida}> + </Text>
 
-      <Text style={styles.txtLabel}>1° Número</Text>
-      <TextInput
-        style={styles.txtEntrada}
-        keyboardType="numeric"
-        value={n1}
-        onChangeText={setN1}
-      />
+            <Text style={styles.textLabel}> 2º número </Text>
+            <Input onChangeText={setN2} value={n2} />
 
-      <Text style={styles.txtLabel}>2° Número</Text>
-      <TextInput
-        style={styles.txtEntrada}
-        keyboardType="numeric"
-        value={n2}
-        onChangeText={setN2}
-      />
+            <Text style={[styles.txtSaida, { margin: 0 }]}> = </Text>
 
-      <Text style={styles.textLabel}>Resultado</Text>
-      <TextInput
-        style={styles.txtEntrada}
-        editable={false}
-        value={total}
-      />
+            <Text style={styles.textLabel}> Total </Text>
+            <Input value={parseFloat(total).toFixed(2)} total />
 
-    <View style={{ flexDirection: 'row', justifyContent: 'space-around', marginTop: 20 }}>
-        <TouchableOpacity style={styles.button} onPress={() => calcular('+')}>
-          <Text style={styles.textButton}>+</Text>
-        </TouchableOpacity>
+            <View style={styles.ladoAlado}>
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>+</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>-</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>*</Botao>        
+                <Botao n1={n1} n2={n2} atualizaTotal={setTotal}>/</Botao>        
+            </View>   
 
-        <TouchableOpacity style={styles.button} onPress={() => calcular('-')}>
-          <Text style={styles.textButton}>-</Text>
-        </TouchableOpacity>
+            <Botao onPress={handleZerar}>Zerar</Botao>         
 
-        <TouchableOpacity style={styles.button} onPress={() => calcular('*')}>
-          <Text style={styles.textButton}>×</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.button} onPress={() => calcular('/')}>
-          <Text style={styles.textButton}>÷</Text>
-        </TouchableOpacity>
-      </View>
-
-      <TouchableOpacity style={styles.buttonLimpar} onPress={limpar}>
-        <Text style={styles.textButton}>Limpar</Text>
-      </TouchableOpacity>
-    </View>
-  );
+        </View>
+    );
 }
-
-export default Atividade05;
